@@ -1,0 +1,22 @@
+version: 2
+
+sources: 
+  - name: snowflake_sample_data_tpcds_sf10tcl
+    database: snowflake_sample_data
+    schema: TPCDS_SF10TCL
+    tables:
+      - name: STORE_SALES
+        columns:
+        - name: ss_item_sk
+        description: primary key of the store sales table
+        tests :
+          - not_null
+          - unique
+              
+  - name: STORE_RETURNS
+
+  - name: snowflake_sample_data_tpch_sf1
+    database: snowflake_sample_data
+    schema: tpch_sf1
+    tables:
+      - name: customer
